@@ -80,4 +80,39 @@ $(function () {
         slidesToShow: 5,
         dots: true,
     });
+
+    $('.product_arrows i:nth-child(1)').on('click', function () {
+        $('.product_slider').slick('slickPrev');
+    });
+    $('.product_arrows i:nth-child(2)').on('click', function () {
+        $('.product_slider').slick('slickNext');
+    });
+
+    $('.hd_left_slider').slick({
+        arrows: false,
+        fade: true,
+        asNavFor: '.hd_right_slider',
+    });
+
+    $('.hd_right_slider').slick({
+        arrows: false,
+        slidesToShow: 4,
+        asNavFor: '.hd_left_slider',
+    });
+
+    $('.hd_section .hd_arrows i:nth-child(1)').on('click', function () {
+        $('.hd_right_slider').slick('slickPrev');
+    });
+
+    $('.hd_section .hd_arrows i:nth-child(2)').on('click', function () {
+        $('.hd_right_slider').slick('slickNext');
+    });
+
+    $('.tab_menu li a').on('click', function (e) {
+        e.preventDefault();
+        var idx = $(this).parent().index();
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        $('.tab_content>div').eq(idx).addClass('on').siblings().removeClass('on');
+    });
+
 });
