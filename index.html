@@ -41,11 +41,37 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li><a href="">하이주얼리</a></li>
-                        <li><a href="">주얼리 컬렉션</a></li>
-                        <li><a href="">컬렉션 & 브라이덜</a></li>
-                        <li><a href="">웨딩주얼리</a></li>
-                        <li><a href="">특별한 솔리테어</a></li>
+                        <li>
+                            <a href="">하이주얼리</a>
+                            <ul>
+                                <li><a href="">menu01</a></li>
+                                <li><a href="">menu02</a></li>
+                                <li><a href="">menu03</a></li>
+                                <li><a href="">menu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">주얼리 컬렉션</a>
+                            <ul>
+                                <li><a href="">menu01</a></li>
+                                <li><a href="">menu02</a></li>
+                                <li><a href="">menu03</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">컬렉션 & 브라이덜</a>
+                            <ul>
+                                <li><a href="">menu01</a></li>
+                                <li><a href="">menu02</a></li>
+                                <li><a href="">menu03</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">웨딩주얼리</a>
+                        </li>
+                        <li>
+                            <a href="">특별한 솔리테어</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="search">
@@ -292,34 +318,71 @@
                         </div>
                     </div>
                     <div class="right">
-                        <!-- * 카카오맵 - 지도퍼가기 -->
-                        <!-- 1. 지도 노드 -->
-                        <div id="daumRoughmapContainer1655902102754"
-                            class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                        <div class="kkmap">
+                            <!-- * 카카오맵 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1655902102754"
+                                class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-                        <!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
-                        <script charset="UTF-8" class="daum_roughmap_loader_script"
-                            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                            <!--
+                                2. 설치 스크립트
+                                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                            -->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-                        <!-- 3. 실행 스크립트 -->
-                        <script charset="UTF-8">
-                            new daum.roughmap.Lander({
-                                "timestamp": "1655902102754",
-                                "key": "2apir",
-                                // "mapWidth": "640",
-                                // "mapHeight": "360"
-                            }).render();
-                        </script>
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp": "1655902102754",
+                                    "key": "2apir",
+                                    // "mapWidth": "640",
+                                    // "mapHeight": "360"
+                                }).render();
+                            </script>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-
+            <div class="top">
+                <div class="container">
+                    <ul class="service">
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">문의하기</a></li>
+                        <li class="bold"><a href="">개인정보 취급방침</a></li>
+                        <li><a href="">예약하기</a></li>
+                        <li><a href="">사이즈 가이드</a></li>
+                        <li><a href="">그라프 하우스 소개</a></li>
+                    </ul>
+                    <div class="sns">
+                        <a href="http://naver.com" target="_blank"><i class="xi-kakaotalk"></i></a>
+                        <a href="http://naver.com" target="_blank"><i class="xi-facebook"></i></a>
+                        <a href="http://naver.com" target="_blank"><i class="xi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <address>전화번호 : <a href="tel:011-592-4960">011-592-4960</a><a href="mailto:Graff@mail.com">
+                            Graff@mail.com</a> France Headquarters 237 rue Saint-Honore
+                        Paris 75001
+                    </address>
+                    <div class="family_link">
+                        <select id="fl">
+                            <option value="">family_link</option>
+                            <option value="http://naver.com">naver</option>
+                            <option value="http://daum.net">daum</option>
+                            <option value="http://google.com">google</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </footer>
+        <div class="to_top">
+            <i class="xi-arrow-top"></i>
+        </div>
     </div>
 </body>
 
