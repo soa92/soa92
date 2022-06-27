@@ -79,6 +79,14 @@ $(function () {
         centerMode: true,
         slidesToShow: 5,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     $('.product_arrows i:nth-child(1)').on('click', function () {
@@ -140,6 +148,25 @@ $(function () {
         // } else {
         //     $('.to_top').fadeOut(1000);
         // }
+    });
+
+    $('.mopen').on('click', function () {
+        $(this).toggleClass('on');
+        $('nav').toggleClass('on');
+    });
+
+    $('.header nav>ul>li>a').on('click', function (event) {
+        var idx = $(this).parent().index();
+        if ($('nav').hasClass('on') && idx < 3) {
+            event.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('ul').slideUp();
+        }
+    });
+
+    $(window).on('resize', function () {
+        $('nav').removeClass('on');
+        $('.header ul ul').removeAttr('style');
     });
 
 });
